@@ -1,0 +1,41 @@
+<div class="search">
+  <form #form="ngForm" (submit)="onSubmit()">
+    <input type="text" placeholder="Buscar localização" name="city" [(ngModel)]="initialCity">
+    <span (click)="onSubmit()">
+      <fa-icon
+        animation="fade"
+        style="--fa-animation-duration: 5s; cursor: pointer"
+        size="lg"
+        class="search-icon"
+
+        [icon]="searchIcon"
+      ></fa-icon>
+    </span>
+  </form>
+
+</div>
+
+<!-- COMPONENT SMART OU INTELIGENTE -->
+
+<!---
+  COMPONENT RESPONSÁVEL POR RECEBER AS REQUISIÇÕES E PASSAR PARA OS FILHOS (DUMB)
+  RESPONSÁVEL POR TODA A LÓGICA.
+-->
+
+<!-- COMPONENT DUMB -->
+<!--
+  COMPONENT QUE RECEBE DOS COMPONENTS PAI OS DADOS QUE ELES USARAM DENTRO DELES.
+  DADOS DA TEMPERATURA, ETC...
+-->
+
+<!--
+  INPUTS -> são feitos para que nós possamos passar dados de um component pai para o component Filho.
+
+-->
+
+<!--
+  *ngIf -> O component filho só vai receber os dados se o component pai estiver preenchido, no caso o pq da condição.]
+  * [weatherDatasInput] -> input que recebe os dados "weatherDatas" os dados sendo passados para o filho
+-->
+
+<app-weather-card *ngIf="weatherDatas" [weatherDatasInput]="weatherDatas"></app-weather-card>
