@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { WeatherService } from '../../services/weather.service';
 import { WeatherDatas } from 'src/app/models/interfaces/WeatheDatas';
-import { Subject, take, takeUntil } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
